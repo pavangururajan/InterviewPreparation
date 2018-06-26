@@ -2,6 +2,7 @@
 Resources to prepare for interviews
 
 ## Algorithms and DS
+https://github.com/mission-peace/interview/wiki
 
 https://leetcode.com/problemset/all/
 
