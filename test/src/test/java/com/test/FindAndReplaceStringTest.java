@@ -2,13 +2,15 @@ package com.test;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * @author: pavan.g
  * created: 13/05/18.
  */
 public class FindAndReplaceStringTest {
+
 
     @Test
     public void findReplaceString() {
@@ -18,5 +20,6 @@ public class FindAndReplaceStringTest {
         String[] targets = {"eee", "ffff"};
         FindAndReplaceString findAndReplaceString = new FindAndReplaceString();
         System.out.println(findAndReplaceString.findReplaceString(S, indexes, sources, targets));
+        PriorityQueue<Integer> p = new PriorityQueue<>(Comparator.reverseOrder());
     }
 }
