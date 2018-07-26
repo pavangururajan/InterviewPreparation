@@ -14,5 +14,6 @@ public class LongestCommonSubsequenceTest {
     public void longestCommonSubsequence() {
         LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
         System.out.println(longestCommonSubsequence.longestCommonSubsequence("ABCDGH", "AEDFHR"));
+        System.out.println(longestCommonSubsequence.lcsRecursive("ABCDGH", "AEDFHR"));
     }
 }

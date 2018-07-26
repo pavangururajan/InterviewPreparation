@@ -22,4 +22,18 @@ public class LongestCommonSubsequence {
         }
         return dp[a.length()][b.length()];
     }
+
+    public int lcsRecursive(String a, String b) {
+        return helper(a, b, a.length()-1, b.length()-1);
+    }
+
+    private int helper(String a, String b, int m, int n) {
+        if (m < 0 || n < 0) {
+            return 0;
+        }
+        if (a.charAt(m) == b.charAt(n)) {
+            return 1 + helper(a, b, m-1, n-1);
+        }
+        return Math.max(helper(a, b, m-1, n), helper(a, b, m, n-1));
+    }
 }

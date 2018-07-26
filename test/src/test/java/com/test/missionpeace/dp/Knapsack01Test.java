@@ -14,6 +14,6 @@ public class Knapsack01Test {
         int[] weights = new int[]{31, 10, 20, 19, 3, 4, 6};
         int[] values = new int[]{70, 20, 39, 37, 7, 5, 10};
         System.out.println(knapsack01.getMaxValueDP(50, weights, values));
-        System.out.println(knapsack01.getMaxValueDP());
+        System.out.println(knapsack01.getMaxValueDP(50, weights, values));
     }
 }
