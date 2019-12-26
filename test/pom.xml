@@ -49,6 +49,11 @@
           <artifactId>json</artifactId>
           <version>20180130</version>
       </dependency>
+      <!-- https://mvnrepository.com/artifact/javafx/javafx -->
+      <dependency>
+          <groupId>javafx</groupId>
+          <artifactId>javafx</artifactId>
+      </dependency>
 
   </dependencies>
 </project>
