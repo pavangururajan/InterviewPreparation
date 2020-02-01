@@ -16,8 +16,8 @@ public class RotateMatrix {
             int m = i + 1, n = l - 1;
             for (int j = i + 1, k = l - 1; j < l && k > i; j++, k--) {
                 int temp1 = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = matrix[l][k];
+                matrix[i][j] = matrix[k][i];
+                matrix[k][i] = matrix[l][k];
                 matrix[l][k] = matrix[j][l];
                 matrix[j][l] = temp1;
             }
