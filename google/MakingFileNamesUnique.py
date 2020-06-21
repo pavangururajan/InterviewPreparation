@@ -9,26 +9,20 @@ class Solution(object):
         count = {}
         result = []
         for n in names:
-            paranthesis_start = n.rfind('(')
-            number = n[paranthesis_start+1:-1]
-            if number:
-                prefix = n[:paranthesis_start]
+            if n in count:
+                current = count[n]
+                while True:
+                    new_name = "%s(%s)" % (n, current)
+                    if new_name not in count:
+                        count[new_name] = 1
+                        count[n] = current+1
+                        result.append(new_name)
+                        break
+                    current += 1
             else:
-                prefix = n
-            if number:
-                try:
-                    number = int(number)
-                    count[n] = count.setdefault(n, ([], False))
-                except Exception as e:
-                    pass
-
-            else:
-                if n not in count:
-                    count[n] = ([], True)
-                else:
-                    pass
-
-
+                result.append(n)
+                count[n] = 1
+        return result
 
 class Trie(object):
 
@@ -72,3 +66,6 @@ class TrieNode(object):
 
     def mark_sentinel(self):
         self._sentinel = True
+
+soln = Solution()
+print(soln.getFolderNames(["gss", "gss", "gss(3)", "gss", "gss", "gss(3)"]))
