@@ -27,7 +27,7 @@ class Solution:
         return diff
 
 soln = Solution()
-print(soln.partition([1,6,11,5]))
-print(soln.partition([7,3,2,5,6,10]))
-print(soln.partition([7]))
-print(soln.partition([]))
+#print(soln.partition([1,6,11,5]))
+print(soln.partition([7,3,2,5,6,10, -111, -3]))
+#print(soln.partition([7]))
+#print(soln.partition([]))
