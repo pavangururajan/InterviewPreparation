@@ -3,6 +3,7 @@
 
 from typing import List
 import heapq
+from collections import deque
 
 class Solution:
 
@@ -25,6 +26,26 @@ class Solution:
             maximum = max(maximum, j-the_index+1)
         return maximum
 
+    def longestSubarray2(self, nums, limit):
+        maxq = deque()
+        minq = deque()
+        i = 0
+        for n in nums:
+            while maxq and n > maxq[-1]:
+                maxq.pop()
+            while minq and n < minq[-1]:
+                minq.pop()
+            maxq.append(n)
+            minq.append(n)
+            if maxq[0] - minq[0] > limit:
+                if maxq[0] == nums[i]:
+                    maxq.popleft()
+                if minq[0] == nums[i]:
+                    minq.popleft()
+                i += 1
+        return len(nums) - i
+
 
 soln = Solution()
 print(soln.longestSubarray([8,2,4,7], 4))
+print(soln.longestSubarray2([8,2,4,7], 4))
