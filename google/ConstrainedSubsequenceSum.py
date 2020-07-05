@@ -16,4 +16,5 @@ class Solution:
         return max(A)
 
 soln = Solution()
-print(soln.constrainedSubsetSum([10,2,-10,5,20], 2))
+print(soln.constrainedSubsetSum([10,-2,-10,-5,20], 2))
+print(soln.constrainedSubsetSum([-7609,249,-1699,2385,9125,-9037,1107,-8228,856,-9526], 9))
